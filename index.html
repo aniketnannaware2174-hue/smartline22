@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Smartline Systems is a leading Electronic Manufacturing Services (EMS) company in Pune providing PCB Assembly, SMT, THT, Box Build Integration and ISO certified manufacturing solutions since 2003.">
+    <meta name="keywords"
+        content="EMS company Pune, PCB assembly India, SMT assembly Pune, electronic manufacturing services, ISO 9001 PCB manufacturer, box build integration India">
+    <meta name="author" content="Smartline Systems">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Smartline Systems | Electronic Manufacturing Services">
+    <meta property="og:description"
+        content="Precision PCB Assembly, SMT, THT & Box Build Integration since 2003. ISO Certified EMS provider in India.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourdomain.com/smartline-preview.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/index.html">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartline Systems | Electronic Manufacturing Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Hero Heading with Montserrat */
+        .hero-bg h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+
+        /* Section Headings */
+        h2,
+        h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .nav-link-active {
+            color: #b91c1c !important;
+            border-bottom: 2px solid #b91c1c;
+            font-weight: 700;
+        }
+
+        .brand-logo {
+            height: 75px;
+            width: auto;
+            object-fit: contain;
+            padding-left: 20px;
+        }
+
+        /* Hero Background */
+        .hero-bg {
+            background: linear-gradient(rgba(12, 4, 4, 0.40), rgba(0, 0, 0, 0.40)),
+                url('logo img/our.png');
+            background-size: cover;
+            background-position: center;
+            /* FIXED: fallback background color so hero is never blank */
+            background-color: #1a1a2e;
+        }
+
+        /* Megamenu - show on hover */
+        .megamenu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-50%) translateY(-8px);
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        }
+
+        .group:hover .megamenu,
+        .nav-group:hover .megamenu-panel {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .megamenu-panel {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-50%) translateY(-8px);
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Marquee */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            background: #ffffff;
+            padding: 40px 0;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: scroll-left 40s linear infinite;
+        }
+
+        .marquee-container:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee-image {
+            height: 180px;
+            width: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 0 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            /* FIXED: hide broken images gracefully */
+            background-color: #e5e7eb;
+        }
+
+        .marquee-image:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        /* FIXED: hide broken img tags */
+        img[src="sk-efgh5678efgh5678efgh5678efgh5678efgh5678"] {
+            display: none;
+        }
+
+        /* Services Marquee */
+        .service-marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .service-marquee-track {
+            display: flex;
+            width: max-content;
+            animation: scroll-left-fast 30s linear infinite;
+        }
+
+        .service-marquee-container:hover .service-marquee-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-left-fast {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- ===== HEADER ===== -->
+    <header class="bg-white sticky top-0 z-[9999] border-b border-gray-200 backdrop-blur-sm">
+        <div class="container mx-auto px-2 py-1 flex justify-between items-center">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="smartline.png" alt="Smartline Systems Logo" class="brand-logo">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-gray-700 font-bold uppercase text-sm">
+
+                <a href="index.html" class="hover:text-red-700 transition-colors nav-link">Home</a>
+                <a href="about.html" class="hover:text-red-700 transition-colors nav-link">About Us</a>
+
+                <!-- Products & Services Dropdown -->
+                <div class="relative group py-4">
+                    <a href="services.html"
+                        class="nav-link flex items-center hover:text-red-700 transition-colors uppercase font-semibold">
+                        Products &amp; Services
+                        <svg class="arrow-icon w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+
+                    <!-- Mega Menu -->
+                    <div class="megamenu absolute left-1/2 top-full mt-3
+                      w-[780px] max-w-[95vw]
+                      bg-white shadow-2xl rounded-lg   
+                      border-t-4 border-red-700
+                      z-[9999] p-6">
+                        <div class="grid grid-cols-3 gap-6 text-left">
+
+                            <!-- Column 1 -->
+                            <div>
+                                <a href="services.html#pcb-assembly" class="block">
+                                    <h3
+                                        class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">
+                                        PCB Assembly (PCBA)
+                                    </h3>
+                                    <a href="services.html#pcb-manufacturing" class="block">
+                                        <h3
+                                            class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">
+                                            PCB Manufacturing Support
+                                        </h3>
+                                    </a>
+
+                                    <!-- Column 2 -->
+                                    <a href="services.html#component-sourcing" class="block">
+                                        <h3
+                                            class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">
+                                            Component Sourcing &amp; Procurement Support
+                                        </h3>
+                                    </a>
+
+                                    <a href="services.html#pcb-design" class="block">
+                                        <h3
+                                            class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">
+                                            PCB Design &amp; Engineering Support
+                                        </h3>
+                                    </a>
+                                    <a href="services.html#box-build" class="block">
+                                        <h3
+                                            class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">
+                                            Box Build &amp; System Integration
+                                        </h3>
+                                    </a>
+                            </div>
+
+                            <!-- Column 3 -->
+                            <div>
+                                <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1">Production
+                                    Facility</h3>
+                                <ul class="space-y-1 text-gray-600 text-xs">
+                                    <li><a href="productionfacility.html#manual-stencil"
+                                            class="hover:text-red-700 block">• Manual high precision stencil printer</a>
+                                    </li>
+                                    <li><a href="productionfacility.html#smd-pick-place"
+                                            class="hover:text-red-700 block">• SMD Pick and Place Machine</a></li>
+                                    <li><a href="productionfacility.html#smt-reflow" class="hover:text-red-700 block">•
+                                            SMT Reflow Machine</a></li>
+                                    <li><a href="productionfacility.html#wave-soldering"
+                                            class="hover:text-red-700 block">• Wave Soldering Machine</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Dropdown -->
+                <div class="relative group py-4">
+                    <a href="contact.html"
+                        class="nav-link flex items-center hover:text-red-700 transition-colors uppercase font-semibold">
+                        Contact
+                        <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <!-- Contact Dropdown Menu -->
+                    <div
+                        class="absolute left-0 top-full mt-3 w-56 bg-white shadow-2xl rounded-lg border-t-4 border-red-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999] py-2">
+                        <a href="contact.html"
+                            class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">Contact Us</a>
+                        <a href="logo img/supplier.html"
+                            class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">Supplier
+                            Registration</a>
+                        <a href="career.html"
+                            class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">Career / Jobs</a>
+                    </div>
+                </div>
+
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="contact.html"
+                class="hidden md:inline-block bg-red-700 text-white font-bold px-6 py-2 rounded shadow-md hover:bg-red-800 transition-all uppercase text-sm">
+                ENQUIRY
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-900">
+                <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 bg-white border-t">
+            <a href="index.html" class="block py-3 font-bold border-b nav-link">Home</a>
+            <a href="about.html" class="block py-3 font-bold border-b nav-link">About Us</a>
+            <a href="services.html" class="block py-3 font-bold border-b nav-link">Services</a>
+            <a href="contact.html" class="block py-3 font-bold nav-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- ===================== MAIN ===================== -->
+    <main>
+
+        <!-- Hero -->
+        <section class="hero-bg h-[600px] flex items-center justify-center text-center text-white px-6">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight uppercase tracking-tighter">
+                    Precision Electronics <span class="text-red-500">Manufacturing Partner</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 font-medium">Precision electronic manufacturing services
+                    since 2003.</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="contact.html"
+                        class="bg-red-700 px-10 py-3 font-bold rounded shadow-lg hover:bg-red-800 transition-all uppercase tracking-widest">
+                        ENQUIRY
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Approach -->
+        <section class="py-20 bg-gray-50 overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-blue-900 font-black uppercase tracking-[0.2em] text-sm mb-4">OUR APPROACH</h2>
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 tracking-tight">Customer-centric PCBs
+                        that prioritize precision, quality, and sustainability.</h3>
+                    <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        We are a leading Electronics Manufacturing Services (EMS) provider delivering high-quality PCB
+                        assembly and complete product manufacturing solutions. From prototype to mass production, we
+                        help transform your ideas into reliable, market-ready electronic products.
+                        With advanced manufacturing capabilities, strict quality control, and strong supply chain
+                        management, we ensure cost-effective and on-time delivery for every project.
+                    </p>
+                </div>
+
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl mb-10">
+                        <img src="https://www.nuos-international.com.ua/wp-content/uploads/2020/04/30bd1527e3b2300bfb71a2ebbbf8ed39.jpg"
+                            alt="PCB Manufacturing" class="w-full h-[200px] md:h-[300px] object-cover">
+                    </div>
+
+                    <!-- Feature Cards — FIXED: overlapping z-index & negative margin on mobile -->
+                    <div
+                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 relative z-10 -mt-10 md:-mt-20 px-4">
+
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg text-center border-b-4 border-blue-900 flex flex-col items-center">
+                            <svg class="w-8 h-8 text-blue-900 mb-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                            <p class="text-[10px] md:text-xs font-bold text-blue-900 uppercase">Prototype to Production
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg text-center border-b-4 border-blue-900 flex flex-col items-center">
+                            <svg class="w-8 h-8 text-blue-900 mb-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 10h.01M10 14h.01M10 10h.01M14 14h.01M12 21a9 9 0 100-18 9 9 0 000 18z">
+                                </path>
+                            </svg>
+                            <p class="text-[10px] md:text-xs font-bold text-blue-900 uppercase">Advanced SMT &amp; THT
+                                Assembly</p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg text-center border-b-4 border-blue-900 flex flex-col items-center">
+                            <svg class="w-8 h-8 text-blue-900 mb-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z">
+                                </path>
+                            </svg>
+                            <p class="text-[10px] md:text-xs font-bold text-blue-900 uppercase">ISO-Compliant Quality
+                                Systems</p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg text-center border-b-4 border-blue-900 flex flex-col items-center">
+                            <svg class="w-8 h-8 text-blue-900 mb-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <p class="text-[10px] md:text-xs font-bold text-blue-900 uppercase">Fast Turnaround &amp;
+                                Competitive Pricing</p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg text-center border-b-4 border-blue-900 flex flex-col items-center">
+                            <svg class="w-8 h-8 text-blue-900 mb-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-[10px] md:text-xs font-bold text-blue-900 uppercase">Timely Deliveries</p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg text-center border-b-4 border-blue-900 flex flex-col items-center">
+                            <svg class="w-8 h-8 text-blue-900 mb-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <p class="text-[10px] md:text-xs font-bold text-blue-900 uppercase">Continuous Improvement
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-blue-900 font-bold uppercase tracking-widest text-sm mb-2">Company Profile</h2>
+                <h3
+                    class="text-3xl md:text-4xl font-black text-gray-900 mb-8 border-b-4 border-red-700 inline-block pb-2">
+                    About Smartline Systems</h3>
+                <p class="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed mb-10">
+                    Established in 2003, SMARTLINE Systems is a trusted provider of Electronic Manufacturing Services
+                    (EMS), delivering high-quality, cost-effective solutions to customers across India. Over the past
+                    two decades, we have built strong expertise serving diverse industries including Instrumentation,
+                    Level Control, Telecommunications, Machine Manufacturing, Industrial Automation, High-End Consumer
+                    Electronics and Lighting. Our facility is equipped with advanced Surface Mount Technology (SMT)
+                    systems and supporting equipment capable of handling both active and passive components with
+                    precision. Backed by a highly trained and experienced team, we ensure consistent quality,
+                    reliability and on-time delivery for every project.
+                </p>
+                <a href="about.html"
+                    class="text-red-700 font-bold uppercase text-sm border-b-2 border-red-700 pb-1 hover:text-red-800 transition-colors">
+                    Read More About Us &rarr;
+                </a>
+            </div>
+        </section>
+
+        <!-- Production Facility Highlight -->
+        <section class="py-20 bg-gray-50 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-14">
+                    <h2 class="text-blue-900 font-bold uppercase tracking-widest text-sm mb-2">Infrastructure</h2>
+                    <h3 class="text-3xl md:text-4xl font-black text-gray-900 mb-4 inline-block">
+                        <span class="text-red-700">Production Facility</span>
+                    </h3>
+                    <p class="max-w-2xl mx-auto text-gray-600">Equipped with advanced automated machinery to ensure
+                        precision, reliability, and scale in electronic manufacturing.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Machine 1 -->
+                    <div
+                        class="bg-white rounded-xl shadow-md p-6 flex flex-col sm:flex-row items-center gap-6 hover:shadow-lg transition border border-gray-100">
+                        <img src="https://www.neodensmt.com/uploads/202414386/pick-and-place-machine-for-pcb-smd-assemblyeaf968af-ccfe-4641-ae6b-3e2f918d678a.jpg"
+                            alt="SMD Pick and Place" class="w-full sm:w-40 h-40 object-cover rounded-lg shadow-sm">
+                        <div class="text-center sm:text-left">
+                            <h4 class="text-xl font-bold text-blue-900 mb-2">SMD Pick &amp; Place</h4>
+                            <p class="text-sm text-gray-600 mb-4">High-speed assembly up to 6000 CPH with positioning
+                                accuracy of ±0.025 mm for diverse components.</p>
+                            <a href="productionfacility.html#smd-pick-place"
+                                class="text-red-700 font-bold text-sm tracking-wide hover:text-red-800 uppercase">View
+                                Details &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Machine 2 -->
+                    <div
+                        class="bg-white rounded-xl shadow-md p-6 flex flex-col sm:flex-row items-center gap-6 hover:shadow-lg transition border border-gray-100">
+                        <img src="logo img/smt.png" alt="SMT Reflow"
+                            class="w-full sm:w-40 h-40 object-cover rounded-lg shadow-sm">
+                        <div class="text-center sm:text-left">
+                            <h4 class="text-xl font-bold text-blue-900 mb-2">SMT Reflow Oven</h4>
+                            <p class="text-sm text-gray-600 mb-4">Intelligent multi-zone heating with ±1°C accuracy,
+                                fully compatible with RoHS lead-free processes.</p>
+                            <a href="productionfacility.html#smt-reflow"
+                                class="text-red-700 font-bold text-sm tracking-wide hover:text-red-800 uppercase">View
+                                Details &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Machine 3 -->
+                    <div
+                        class="bg-white rounded-xl shadow-md p-6 flex flex-col sm:flex-row items-center gap-6 hover:shadow-lg transition border border-gray-100">
+                        <img src="logo img/wave.jpg" alt="Wave Soldering"
+                            class="w-full sm:w-40 h-40 object-cover rounded-lg shadow-sm">
+                        <div class="text-center sm:text-left">
+                            <h4 class="text-xl font-bold text-blue-900 mb-2">Wave Soldering</h4>
+                            <p class="text-sm text-gray-600 mb-4">Automatic laminar solder wave system ensuring
+                                exceptional repeatability for THT components.</p>
+                            <a href="productionfacility.html#wave-soldering"
+                                class="text-red-700 font-bold text-sm tracking-wide hover:text-red-800 uppercase">View
+                                Details &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Machine 4 -->
+                    <div
+                        class="bg-white rounded-xl shadow-md p-6 flex flex-col sm:flex-row items-center gap-6 hover:shadow-lg transition border border-gray-100">
+                        <img src="https://media.rs-online.com/Y2517686-01.jpg" alt="ESD Workstation"
+                            class="w-full sm:w-40 h-40 object-cover rounded-lg shadow-sm">
+                        <div class="text-center sm:text-left">
+                            <h4 class="text-xl font-bold text-blue-900 mb-2">ESD-Safe Workstations</h4>
+                            <p class="text-sm text-gray-600 mb-4">Climate-controlled area with full ESD protection,
+                                ensuring zero defects for sensitive static susceptible components.</p>
+                            <a href="productionfacility.html"
+                                class="text-red-700 font-bold text-sm tracking-wide hover:text-red-800 uppercase">View
+                                Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services -->
+        <section class="py-20 bg-white">
+            <div class="max-w-[100vw] overflow-hidden mx-auto">
+                <div class="text-center mb-14 px-6">
+                    <h2 class="text-2xl font-extrabold tracking-widest">
+                        OUR <span class="text-blue-800">SERVICES</span>
+                    </h2>
+                </div>
+
+                <!-- Scrolling Marquee Container -->
+                <div class="service-marquee-container">
+                    <div class="service-marquee-track gap-6">
+
+                        <!-- === SET 1 === -->
+                        <div
+                            class="whitespace-normal w-full min-w-[208px] max-w-[208px] bg-white rounded-xl shadow-md p-5 text-center flex-shrink-0 hover:-translate-y-2 transition border border-gray-100 flex flex-col justify-between">
+                            <img src="https://i.ibb.co/1GmdRxdg/image.png" alt="PCB Assembly"
+                                class="h-28 mx-auto mb-4 object-contain">
+                            <h3
+                                class="text-sm font-semibold text-blue-900 mb-3 leading-tight min-h-[48px] flex items-center justify-center text-balance">
+                                PCB Assembly
+                            </h3>
+                            <a href="services.html"
+                                class="mt-auto text-xs bg-blue-900 text-white px-4 py-2 rounded inline-block shadow-sm">Read
+                                More</a>
+                        </div>
+
+                        <div
+                            class="whitespace-normal w-full min-w-[208px] max-w-[208px] bg-white rounded-xl shadow-md p-5 text-center flex-shrink-0 hover:-translate-y-2 transition border border-gray-100 flex flex-col justify-between">
+                            <img src="https://industries.winstonind.com/wp-content/uploads/2024/11/no-clean-solder.jpg"
+                                alt="PCB Manufacturing" class="h-28 mx-auto mb-4 object-contain">
+                            <h3
+                                class="text-sm font-semibold text-blue-900 mb-3 leading-tight min-h-[48px] flex items-center justify-center text-balance">
+                                PCB Manufacturing</h3>
+                            <a href="services.html"
+                                class="mt-auto text-xs bg-blue-900 text-white px-4 py-2 rounded inline-block shadow-sm">Read
+                                More</a>
+                        </div>
+
+                        <div
+                            class="whitespace-normal w-full min-w-[208px] max-w-[208px] bg-white rounded-xl shadow-md p-5 text-center flex-shrink-0 hover:-translate-y-2 transition border border-gray-100 flex flex-col justify-between">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVpkyst4ftQiogZLIaJt0mRQce2omntCAyaQ&s"
+                                alt="Component Procurement" class="h-28 mx-auto mb-4 object-contain">
+                            <h3
+                                class="text-sm font-semibold text-blue-900 mb-3 leading-tight min-h-[48px] flex items-center justify-center text-balance">
+                                Component
+                                Procurement</h3>
+                            <a href="services.html"
+                                class="mt-auto text-xs bg-blue-900 text-white px-4 py-2 rounded inline-block shadow-sm">Read
+                                More</a>
+                        </div>
+
+                        <div
+                            class="whitespace-normal w-full min-w-[208px] max-w-[208px] bg-white rounded-xl shadow-md p-5 text-center flex-shrink-0 hover:-translate-y-2 transition border border-gray-100 flex flex-col justify-between">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWbcauRwjRX60Y1zb5L-An1oS2xFkH9Apzkw&s"
+                                alt="PCB Design" class="h-28 mx-auto mb-4 object-contain">
+                            <h3
+                                class="text-sm font-semibold text-blue-900 mb-3 leading-tight min-h-[48px] flex items-center justify-center text-balance">
+                                PCB Design
+                            </h3>
+                            <a href="services.html"
+                                class="mt-auto text-xs bg-blue-900 text-white px-4 py-2 rounded inline-block shadow-sm">Read
+                                More</a>
+                        </div>
+
+                        <div
+                            class="whitespace-normal w-full min-w-[208px] max-w-[208px] bg-white rounded-xl shadow-md p-5 text-center flex-shrink-0 hover:-translate-y-2 transition border border-gray-100 flex flex-col justify-between">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdi-1GdJGlOthN85mAG1pq4hhOAUTADSjMtQ&s"
+                                alt="Box Build" class="h-28 mx-auto mb-4 object-contain">
+                            <h3
+                                class="text-sm font-semibold text-blue-900 mb-3 leading-tight text-balance min-h-[48px] flex items-center justify-center">
+                                Box Build
+                                &amp; System Integration</h3>
+                            <a href="services.html"
+                                class="mt-auto text-xs bg-blue-900 text-white px-4 py-2 rounded inline-block shadow-sm">Read
+                                More</a>
+                        </div>
+
+
+                        <!-- === SET 2 (Duplicate for Seamless Scroll) === -->
+                        <div
+                            class="whitespace-normal w-full min-w-[208px] max-w-[208px] bg-white rounded-xl shadow-md p-5 text-center flex-shrink-0 hover:-translate-y-2 transition border border-gray-100 flex flex-col justify-between">
+                            <img src="https://i.ibb.co/1GmdRxdg/image.png" alt="PCB Assembly"
+                                class="h-28 mx-auto mb-4 object-contain">
+                            <h3
+                                class="text-sm font-semibold text-blue-900 mb-3 leading-tight min-h-[48px] flex items-center justify-center text-balance">
+                                PCB Assembly</h3>
+                            <a href="services.html"
+                                class="mt-auto text-xs bg-blue-900 text-white px-4 py-2 rounded inline-block shadow-sm">Read
+                                More</a>
+                        </div>
+
+                        <div
+                            class="w-full min-w-[208px] max-w-[208px] bg-white rounded-xl shadow-md p-5 text-center flex-shrink-0 hover:-translate-y-2 transition border border-gray-100">
+                            <img src="https://industries.winstonind.com/wp-content/uploads/2024/11/no-clean-solder.jpg"
+                                alt="PCB Manufacturing" class="h-28 mx-auto mb-4 object-contain">
+                            <h3 class="text-sm font-semibold text-blue-900 mb-3 leading-tight min-h-[40px]">PCB
+                                Manufacturing</h3>
+                            <a href="services.html"
+                                class="text-xs bg-blue-900 text-white px-4 py-2 rounded inline-block shadow-sm">Read
+                                More</a>
+                        </div>
+
+                        <div
+                            class="w-full min-w-[208px] max-w-[208px] bg-white rounded-xl shadow-md p-5 text-center flex-shrink-0 hover:-translate-y-2 transition border border-gray-100">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVpkyst4ftQiogZLIaJt0mRQce2omntCAyaQ&s"
+                                alt="Component Procurement" class="h-28 mx-auto mb-4 object-contain">
+                            <h3 class="text-sm font-semibold text-blue-900 mb-3 leading-tight min-h-[40px]">Component
+                                Procurement</h3>
+                            <a href="services.html"
+                                class="text-xs bg-blue-900 text-white px-4 py-2 rounded inline-block shadow-sm">Read
+                                More</a>
+                        </div>
+
+                        <div
+                            class="w-full min-w-[208px] max-w-[208px] bg-white rounded-xl shadow-md p-5 text-center flex-shrink-0 hover:-translate-y-2 transition border border-gray-100">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWbcauRwjRX60Y1zb5L-An1oS2xFkH9Apzkw&s"
+                                alt="PCB Design" class="h-28 mx-auto mb-4 object-contain">
+                            <h3 class="text-sm font-semibold text-blue-900 mb-3 leading-tight min-h-[40px]">PCB Design
+                            </h3>
+                            <a href="services.html"
+                                class="text-xs bg-blue-900 text-white px-4 py-2 rounded inline-block shadow-sm">Read
+                                More</a>
+                        </div>
+
+                        <div
+                            class="w-full min-w-[208px] max-w-[208px] bg-white rounded-xl shadow-md p-5 text-center flex-shrink-0 hover:-translate-y-2 transition border border-gray-100">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdi-1GdJGlOthN85mAG1pq4hhOAUTADSjMtQ&s"
+                                alt="Box Build" class="h-28 mx-auto mb-4 object-contain">
+                            <h3 class="text-sm font-semibold text-blue-900 mb-3 leading-tight min-h-[40px]">Box Build
+                                &amp; System Integration</h3>
+                            <a href="services.html"
+                                class="text-xs bg-blue-900 text-white px-4 py-2 rounded inline-block shadow-sm">Read
+                                More</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries We Serve -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold">
+                        INDUSTRIES <span class="text-indigo-600">WE SERVE</span>
+                    </h2>
+                    <p class="text-gray-500 mt-3">High-quality, efficient PCB solutions</p>
+                    <div class="w-16 h-1 bg-indigo-600 mx-auto mt-4"></div>
+                </div>
+
+                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+                    <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                        <img src="https://ibtinc.com/wp-content/uploads/2024/07/Industrial-automation-future-trends.jpg"
+                            alt="Industrial Automation"
+                            class="h-72 w-full object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-24 pb-6">
+                            <h3 class="w-full text-center text-white font-bold uppercase">Industrial
+                                Automation</h3>
+                        </div>
+                    </div>
+
+                    <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                        <img src="https://www.kingfordpcb.com/uploadfile/ueditor/image/202206/16563205842a44ba.webp"
+                            alt="Automotive Electronics"
+                            class="h-72 w-full object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-24 pb-6">
+                            <h3 class="w-full text-center text-white font-bold uppercase">Automotive
+                                Electronics</h3>
+                        </div>
+                    </div>
+
+                    <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVpkyst4ftQiogZLIaJt0mRQce2omntCAyaQ&s"
+                            alt="Telecommunications"
+                            class="h-72 w-full object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-24 pb-6">
+                            <h3 class="w-full text-center text-white font-bold uppercase">
+                                Telecommunications</h3>
+                        </div>
+                    </div>
+
+                    <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                        <img src="https://www.globalwellpcba.com/wp-content/uploads/2024/11/Medical-monitor-and-circuit-board-with-electronic-components.webp"
+                            alt="Medical Devices"
+                            class="h-72 w-full object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-24 pb-6">
+                            <h3 class="w-full text-center text-white font-bold uppercase">Medical Devices</h3>
+                        </div>
+                    </div>
+
+                    <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                        <img src="https://www.electronicsforyou.biz/wp-content/uploads/2019/11/LED-Lighting.jpg"
+                            alt="LED & Lighting"
+                            class="h-72 w-full object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-24 pb-6">
+                            <h3 class="w-full text-center text-white font-bold uppercase">LED &amp;
+                                Lighting</h3>
+                        </div>
+                    </div>
+
+                    <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                        <img src="https://www.technosphere.io/wp-content/uploads/2022/11/Untitled-design-1.jpg"
+                            alt="IoT & Smart Devices"
+                            class="h-72 w-full object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-24 pb-6">
+                            <h3 class="w-full text-center text-white font-bold uppercase">IoT &amp; Smart
+                                Devices</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision, Mission, Values -->
+        <!-- FIXED: was incorrectly nested inside the Industries section div -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold">
+                        Our <span class="text-blue-800">Vision, Mission &amp; Values</span>
+                    </h2>
+                    <div class="w-16 h-1 bg-red-700 mx-auto mt-4"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <!-- Vision -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition duration-300">
+                        <img src="https://i0.wp.com/mymeadowreport.com/wp-content/uploads/2020/01/img_1111.jpg?fit=1000%2C750&ssl=1"
+                            alt="Vision" class="h-48 w-full object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-lg font-bold text-blue-900 mb-4 uppercase">Vision</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed">
+                                SMARTLINE aims to deliver competitive, high-quality electronic manufacturing services
+                                while fostering innovation, teamwork, and continuous improvement.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Mission -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition duration-300">
+                        <img src="https://www.projectmanager.com/wp-content/uploads/2018/11/181112_Blog_Feature_Mission.jpg"
+                            alt="Mission" class="h-48 w-full object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-lg font-bold text-blue-900 mb-4 uppercase">Mission</h3>
+                            <ul class="text-sm text-gray-700 space-y-2 text-left">
+                                <li>• Build long-term customer relationships</li>
+                                <li>• Enhance employee knowledge &amp; leadership</li>
+                                <li>• Implement efficient production systems</li>
+                                <li>• Maintain highest quality standards</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Values -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition duration-300">
+                        <img src="https://strategicmanagementinsight.com/wp-content/uploads/featured-value-statement.png"
+                            alt="Values" class="h-48 w-full object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-lg font-bold text-blue-900 mb-4 uppercase">Values</h3>
+                            <ul class="text-sm text-gray-700 space-y-2 text-left">
+                                <li>• Strong Customer Relations</li>
+                                <li>• High Quality Products &amp; Services</li>
+                                <li>• Employee Growth &amp; Leadership</li>
+                                <li>• Integrity &amp; Respect</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee / Facility Images -->
+        <section class="marquee-container">
+            <div class="text-center mb-8">
+                <h2 class="text-blue-900 font-bold uppercase tracking-widest text-xs mb-2">Our Facility &amp; Expertise
+                </h2>
+                <div class="w-12 h-1 bg-red-700 mx-auto"></div>
+            </div>
+
+            <div class="marquee-track">
+                <!-- Set 1 -->
+                <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=500"
+                    class="marquee-image" alt="PCB Assembly">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=500"
+                    class="marquee-image" alt="Soldering Station">
+                <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&q=80&w=500"
+                    class="marquee-image" alt="Electronics Testing">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipN4dVFPH_VHHg7lWi-rLdSNcC_7NbWbn72AoNMT=s1360-w1360-h1020-rw"
+                    class="marquee-image" alt="SMT Component">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=500"
+                    class="marquee-image" alt="Microchip Detail">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=500"
+                    class="marquee-image" alt="Industrial Tech">
+
+                <!-- Set 2 — duplicate for seamless loop. FIXED: removed invalid/broken src -->
+                <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=500"
+                    class="marquee-image" alt="PCB Assembly">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=500"
+                    class="marquee-image" alt="Soldering Station">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipP7ZJwOQGJh8VqkIl8EPW4j2XnkCdf047Mwc1ar=s1360-w1360-h1020-rw"
+                    class="marquee-image" alt="Electronics Testing">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=500"
+                    class="marquee-image" alt="Microchip Detail">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipMOiUhAr2dvxfVsBEM4DbyrZT-gt1wGaul7Q2nW=s1360-w1360-h1020-rw"
+                    class="marquee-image" alt="Industrial Tech">
+                <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&q=80&w=500"
+                    class="marquee-image" alt="Facility">
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+
+                <div class="text-center mb-16">
+                    <h2 class="text-blue-900 font-bold uppercase tracking-widest text-sm mb-2">Contact Us</h2>
+                    <h3 class="text-4xl font-black text-gray-900">Get in Touch With Us</h3>
+                    <div class="w-16 h-1 bg-red-700 mx-auto mt-3"></div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-14 items-start">
+
+                    <!-- Map -->
+                    <div class="bg-white p-5 rounded-2xl shadow-xl">
+                        <div class="rounded-xl overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps?q=SMARTLINE+Systems+Plot+No.+RM-99+B-3+Shahunagar+MIDC+Chinchwad+Pune+411019&output=embed"
+                                width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+                                title="Smartline Systems Location">
+                            </iframe>
+                        </div>
+                        <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+                            SMARTLINE Systems | Electronic Manufacturing Services<br>
+                            Plot No. RM-99 B-3 Shahunagar, MIDC,<br>
+                            Chinchwad, Pune – 411019, Maharashtra, India
+                        </p>
+                    </div>
+
+                    <!-- Contact Info + Form -->
+                    <div class="space-y-8">
+
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                            <h4 class="text-lg font-bold text-gray-900 mb-4">Contact Information</h4>
+                            <div class="text-sm text-gray-700 space-y-2">
+                                <p><span class="font-semibold">Phone:</span> +91 9822790563</p>
+                                <p><span class="font-semibold">Email:</span> smartlinesystems@hotmail.com</p>
+                            </div>
+                        </div>
+
+                        <!-- FIXED: <form> tag — removed enctype (not needed for email-only forms without file upload via JS); kept file upload field as-is since it was intentional -->
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200" id="form-container">
+                            <h4 class="text-base font-bold text-gray-900 mb-4">Send Enquiry</h4>
+
+                            <form id="enquiry-form" method="POST" enctype="multipart/form-data" class="space-y-4">
+
+                                <input type="text" name="name" placeholder="Full Name" required
+                                    class="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+
+                                <input type="email" name="email" placeholder="Email Address" required
+                                    class="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+
+                                <input type="tel" name="phone" placeholder="Phone Number"
+                                    class="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+
+                                <textarea name="message" rows="3" placeholder="Your Message"
+                                    class="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700"></textarea>
+
+                                <div>
+                                    <label class="text-xs text-gray-600">Upload Document (Optional)</label>
+                                    <input type="file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.png"
+                                        class="mt-1 w-full text-xs">
+                                </div>
+
+                                <button type="submit" id="submit-button"
+                                    class="w-full bg-red-700 text-white py-2 text-sm rounded-md font-semibold uppercase tracking-wider hover:bg-red-800 transition">
+                                    Submit
+                                </button>
+                                
+                                <p id="form-message" class="text-sm text-center hidden font-semibold mt-2"></p>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FIX 4: Footer moved outside <main> and all unclosed section/div tags resolved -->
+    <footer class="bg-gray-900 text-white py-12 border-t-8 border-red-700">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <!-- Column 1: Logo & About -->
+                <div>
+                    <img src="smartline.png" alt="Smartline Logo" class="h-12 mb-6">
+                    <p class="text-sm leading-relaxed text-gray-400">
+                        Smartline Systems is a trusted Electronic Manufacturing Services (EMS) provider delivering
+                        precision PCB assembly, manufacturing and integrated solutions since 2003.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="social-icon">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12A10 10 0 1010.06 21.95v-6.2H7.08v-3.55h2.98V9.41c0-2.95 1.76-4.58 4.45-4.58 1.29 0 2.64.23 2.64.23v2.9h-1.49c-1.47 0-1.93.91-1.93 1.84v2.21h3.29l-.53 3.55h-2.76v6.2A10 10 0 0022 12z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 0H4C1.79 0 0 1.79 0 4v16c0 2.21 1.79 4 4 4h16c2.21 0 4-1.79 4-4V4c0-2.21-1.79-4-4-4zM7.09 20H3.56V9h3.53v11zM5.33 7.54a2.05 2.05 0 110-4.1 2.05 2.05 0 010 4.1zM20 20h-3.53v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.97V20H8.91V9h3.39v1.5h.05c.47-.9 1.62-1.87 3.34-1.87 3.57 0 4.23 2.35 4.23 5.4V20z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="footer-link">PCB Assembly</a></li>
+                        <li><a href="#" class="footer-link">PCB Manufacturing</a></li>
+                        <li><a href="#" class="footer-link">Component Procurement</a></li>
+                        <li><a href="#" class="footer-link">Box Build Integration</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="footer-title">Contact Info</h4>
+                    <p class="text-sm mb-2">+91 9822790563</p>
+                    <p class="text-sm mb-4">smartlinesystems@hotmail.com</p>
+                    <p class="text-sm text-gray-500">Pune, Maharashtra, India</p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 mt-14 pt-6 text-center text-xs text-gray-500 tracking-widest">
+                &copy; 2026 SMARTLINE SYSTEMS. ALL RIGHTS RESERVED.
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.toggle('hidden');
+                    menuIcon.innerHTML = isHidden
+                        ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>'
+                        : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+                });
+            }
+
+            // Active nav link highlight
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('nav-link-active');
+                }
+            });
+
+            // Mega menu — keyboard / hover accessibility via JS for nav-group
+            document.querySelectorAll('.nav-group').forEach(group => {
+                const panel = group.querySelector('.megamenu-panel');
+                if (!panel) return;
+                group.addEventListener('mouseenter', () => {
+                    panel.style.opacity = '1';
+                    panel.style.visibility = 'visible';
+                    panel.style.transform = 'translateX(-50%) translateY(0)';
+                });
+                group.addEventListener('mouseleave', () => {
+                    panel.style.opacity = '0';
+                    panel.style.visibility = 'hidden';
+                    panel.style.transform = 'translateX(-50%) translateY(-8px)';
+                });
+            });
+
+            // Hide broken marquee images gracefully
+            document.querySelectorAll('.marquee-image').forEach(img => {
+                img.addEventListener('error', function () {
+                    this.style.display = 'none';
+                });
+            });
+
+            // Google Sheets Form Submission
+            const form = document.getElementById('enquiry-form');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const submitButton = document.getElementById('submit-button');
+                    const formMessage = document.getElementById('form-message');
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbxZGRnKu4k_iaK_0eliZTMfxViuVkJakFRk-1jJDvUXSH2q5NCp5i3dncVhjHoapnezlw/exec';
+
+                    // Update UI to show submitting state
+                    submitButton.disabled = true;
+                    submitButton.innerText = 'Submitting...';
+                    formMessage.classList.add('hidden');
+
+                    fetch(scriptURL, { 
+                        method: 'POST', 
+                        body: new FormData(form) 
+                    })
+                    .then(response => {
+                        // Success state
+                        formMessage.innerText = "Thank you! Your enquiry has been sent successfully.";
+                        formMessage.classList.remove('hidden', 'text-red-600');
+                        formMessage.classList.add('text-green-600');
+                        form.reset();
+                    })
+                    .catch(error => {
+                        // Error state
+                        console.error('Error!', error.message);
+                        formMessage.innerText = "Oops! Something went wrong. Please try again later.";
+                        formMessage.classList.remove('hidden', 'text-green-600');
+                        formMessage.classList.add('text-red-600');
+                    })
+                    .finally(() => {
+                        // Reset button state
+                        submitButton.disabled = false;
+                        submitButton.innerText = 'Submit';
+                    });
+                });
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

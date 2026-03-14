@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- SEO Meta Tags -->
+<meta name="description" content="Smartline Systems is a leading Electronic Manufacturing Services (EMS) company in Pune providing PCB Assembly, SMT, THT, Box Build Integration and ISO certified manufacturing solutions since 2003.">
+<meta name="keywords" content="EMS company Pune, PCB assembly India, SMT assembly Pune, electronic manufacturing services, ISO 9001 PCB manufacturer, box build integration India">
+<meta name="author" content="Smartline Systems">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Smartline Systems | Electronic Manufacturing Services">
+<meta property="og:description" content="Precision PCB Assembly, SMT, THT & Box Build Integration since 2003. ISO Certified EMS provider in India.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://yourdomain.com/smartline-preview.jpg">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://yourdomain.com/about.html">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Smartline Systems</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+    body { font-family: 'Inter', sans-serif; }
+
+    .nav-link-active {
+        color: #b91c1c !important;
+        border-bottom: 2px solid #b91c1c;
+        font-weight: 700;
+    }
+
+    .brand-logo { height: 75px; width: auto; object-fit: contain; padding-left: 20px; }
+
+    .megamenu {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%) translateY(-8px);
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    }
+
+    .group:hover .megamenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .footer-title {
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+
+    .footer-link {
+        color: #9ca3af;
+        transition: color 0.2s;
+        display: block;
+    }
+
+    .footer-link:hover { color: #fff; }
+
+    .social-icon {
+        color: #9ca3af;
+        transition: color 0.2s;
+    }
+
+    .social-icon:hover { color: #fff; }
+</style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- ===== HEADER ===== -->
+    <header class="bg-white sticky top-0 z-[9999] border-b border-gray-200 backdrop-blur-sm">
+        <div class="container mx-auto px-2 py-1 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="smartline.png" alt="Smartline Systems Logo" class="brand-logo">
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-gray-700 font-bold uppercase text-sm">
+                <a href="index.html" class="hover:text-red-700 transition-colors nav-link">Home</a>
+                <a href="about.html" class="hover:text-red-700 transition-colors nav-link">About Us</a>
+
+                <!-- Products & Services Dropdown -->
+                <div class="relative group py-4">
+                    <a href="services.html" class="nav-link flex items-center hover:text-red-700 transition-colors uppercase font-semibold">
+                        Products &amp; Services
+                        <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+
+                    <!-- Mega Menu -->
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full mt-3
+                                w-[780px] max-w-[95vw]
+                                bg-white shadow-2xl rounded-lg
+                                border-t-4 border-red-700
+                                opacity-0 invisible
+                                group-hover:opacity-100 group-hover:visible
+                                transition-all duration-300 z-[9999] p-6">
+
+                        <div class="grid grid-cols-3 gap-6 text-left">
+                          <!-- Column 1 -->
+                          <div>
+                            <a href="services.html#pcb-assembly" class="block">
+                              <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">PCB Assembly (PCBA)</h3>
+                            </a>
+                            <a href="services.html#pcb-manufacturing" class="block">
+                              <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">PCB Manufacturing Support</h3>
+                            </a>
+                            <a href="services.html#component-sourcing" class="block">
+                              <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">Component Sourcing &amp; Procurement Support</h3>
+                            </a>
+                          </div>
+                          <!-- Column 2 -->
+                          <div>
+                            <a href="services.html#pcb-design" class="block">
+                              <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">PCB Design &amp; Engineering Support</h3>
+                            </a>
+                            <a href="services.html#box-build" class="block">
+                              <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">Box Build &amp; System Integration</h3>
+                            </a>
+                          </div>
+                          <!-- Column 3 -->
+                          <div>
+                            <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1">Production Facility</h3>
+                            <ul class="space-y-1 text-gray-600 text-xs">
+                              <li><a href="productionfacility.html#manual-stencil" class="hover:text-red-700 block">• Manual high precision stencil printer</a></li>
+                              <li><a href="productionfacility.html#smd-pick-place" class="hover:text-red-700 block">• SMD Pick and Place Machine</a></li>
+                              <li><a href="productionfacility.html#smt-reflow" class="hover:text-red-700 block">• SMT Reflow Machine</a></li>
+                              <li><a href="productionfacility.html#wave-soldering" class="hover:text-red-700 block">• Wave Soldering Machine</a></li>
+                            </ul>
+                          </div>
+
+            </div>
+          </div>
+        </div>
+                <!-- END Products & Services -->
+
+        <!-- Contact Dropdown -->
+        <div class="relative group py-4">
+          <a href="contact.html" class="nav-link flex items-center hover:text-red-700 transition-colors uppercase font-semibold">
+            Contact
+            <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <!-- Contact Dropdown Menu -->
+          <div class="absolute left-0 top-full mt-3 w-56 bg-white shadow-2xl rounded-lg border-t-4 border-red-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999] py-2">
+            <a href="contact.html" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">Contact Us</a>
+            <a href="logo img/supplier.html" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">Supplier Registration</a>
+            <a href="career.html" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">Career / Jobs</a>
+          </div>
+        </div>
+      </nav>
+
+            <a href="contact.html" class="hidden md:inline-block bg-red-700 text-white font-bold px-6 py-2 rounded shadow-md hover:bg-red-800 transition-all uppercase text-sm">
+                ENQUIRY
+            </a>
+
+            <!-- FIX 1: Unique ID for the toggle button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-900">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- FIX 2: Unique ID for the mobile dropdown menu -->
+        <div id="mobile-menu-dropdown" class="hidden md:hidden px-6 pb-6 bg-white border-t">
+            <a href="index.html" class="block py-3 font-bold border-b nav-link">Home</a>
+            <a href="about.html" class="block py-3 font-bold border-b nav-link">About Us</a>
+            <a href="services.html" class="block py-3 font-bold border-b nav-link">Services</a>
+            <a href="contact.html" class="block py-3 font-bold nav-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main>
+
+        <!-- Company Profile -->
+        <section class="py-20 bg-white overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <div class="max-w-4xl mx-auto reveal">
+                    <h2 class="text-blue-900 font-bold uppercase tracking-widest text-sm mb-2">Company Profile</h2>
+                    <h1 class="text-3xl md:text-5xl font-black text-gray-900 mb-8 border-b-4 border-red-700 inline-block pb-2 uppercase tracking-tighter">About Smartline Systems</h1>
+                    <p class="text-gray-600 text-lg md:text-xl leading-relaxed font-medium">
+                        "Established in 2003, SMARTLINE Systems is a trusted provider of Electronic Manufacturing Services (EMS), delivering high-quality, cost-effective solutions to customers across India. Over the past two decades, we have built strong expertise serving diverse industries including Instrumentation, Level Control, Telecommunications, Machine Manufacturing, Industrial Automation, High-End Consumer Electronics and Lighting. Our facility is equipped with advanced Surface Mount Technology (SMT) systems and supporting equipment capable of handling both active and passive components with precision. Backed by a highly trained and experienced team, we ensure consistent quality, reliability and on-time delivery for every project."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+
+                <div class="text-center mb-16">
+                    <h2 class="text-blue-900 font-bold uppercase tracking-widest text-sm mb-3">Our Certifications & Registrations</h2>
+                    <h3 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Certified Quality & Regulatory Compliance</h3>
+                    <p class="text-gray-600 max-w-3xl mx-auto">
+                        We are committed to maintaining the highest industry standards through certified systems and regulatory compliance.
+                    </p>
+                    <div class="w-16 h-1 bg-red-700 mx-auto mt-6"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <!-- GST -->
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition">
+                        <div class="flex items-center space-x-4 mb-5">
+                            <img src="logo img/gst.png" alt="GST Logo" class="h-12">
+                            <h4 class="text-lg font-bold text-gray-900">GST Registration</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-3">Goods and Services Tax (GST) Registered Company</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>GSTIN: XXXXXXXX</li>
+                            <li>Compliant with Government of India taxation regulations.</li>
+                        </ul>
+                    </div>
+
+                    <!-- ISO -->
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition">
+                        <div class="flex items-center space-x-4 mb-5">
+                            <img src="data:image/png;base64,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" alt="ISO Logo" class="h-12">
+                            <h4 class="text-lg font-bold text-gray-900">ISO 9001:2015</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-3">Quality Management System Certification</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>Certified by accredited certification body</li>
+                            <li>Ensures consistent product quality and process control.</li>
+                        </ul>
+                    </div>
+
+                    <!-- RoHS -->
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition">
+                        <div class="flex items-center space-x-4 mb-5">
+                            <img src="https://i.ibb.co/pBM3ypZW/rohs.png" alt="RoHS Logo" class="h-12">
+                            <h4 class="text-lg font-bold text-gray-900">RoHS Compliance</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-3">Restriction of Hazardous Substances Compliant</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>Environment-friendly manufacturing</li>
+                            <li>Products meet international environmental safety standards.</li>
+                        </ul>
+                    </div>
+
+                    <!-- MSME -->
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition">
+                        <div class="flex items-center space-x-4 mb-5">
+                            <div class="h-16 w-16 flex items-center justify-center flex-shrink-0">
+                                <img src="https://i.ibb.co/GZLqHvp/Untitled-design-15.png" alt="MSME Logo" class="h-full w-full object-contain">
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 leading-tight">MSME Registration</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-3">Registered Micro, Small & Medium Enterprise</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>Udyam Registration No: XXXXXXXX</li>
+                            <li>Recognized by Government of India.</li>
+                        </ul>
+                    </div>
+
+                    <!-- ZED -->
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition md:col-span-2 lg:col-span-1">
+                        <div class="flex items-center space-x-4 mb-5">
+                            <img src="https://i.ibb.co/tTZXKdhM/zed.jpg" alt="ZED Logo" class="h-12">
+                            <h4 class="text-lg font-bold text-gray-900">ZED Certification</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-3">Zero Defect Zero Effect Certified Enterprise</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>Commitment to high-quality manufacturing</li>
+                            <li>Environmentally responsible production practices.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Commitment Section -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-6xl">
+
+                <div class="text-center mb-16">
+                    <h2 class="text-blue-900 font-bold uppercase tracking-widest text-sm mb-3">Our Commitment</h2>
+                    <h3 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Electronic Manufacturing Excellence Since 2003</h3>
+                    <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        Delivering high-quality electronic manufacturing services at competitive costs while ensuring long-term customer satisfaction.
+                    </p>
+                    <div class="w-16 h-1 bg-red-700 mx-auto mt-6"></div>
+                </div>
+
+                <!-- Image Strip -->
+                <div class="grid md:grid-cols-3 gap-6 mb-20">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipMpihvJlZCFRY8Mk1faxD__Ewnv04oRsLHJuVOI=s1360-w1360-h1020-rw" class="rounded-lg shadow-md w-full h-48 object-cover hover:scale-105 transition duration-300" alt="Facility 1">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipOqW-9DlLJlGP6J0AbHmD07VXaXK1BmV1tUkcCR=s1360-w1360-h1020-rw" class="rounded-lg shadow-md w-full h-48 object-cover hover:scale-105 transition duration-300" alt="Facility 2">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipP7ZJwOQGJh8VqkIl8EPW4j2XnkCdf047Mwc1ar=s1360-w1360-h1020-rw" class="rounded-lg shadow-md w-full h-48 object-cover hover:scale-105 transition duration-300" alt="Facility 3">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Vision Mission Values Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold">
+                        Our <span class="text-blue-800">Vision, Mission &amp; Values</span>
+                    </h2>
+                    <div class="w-16 h-1 bg-red-700 mx-auto mt-4"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <!-- Vision -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition duration-300">
+                        <img src="https://i0.wp.com/mymeadowreport.com/wp-content/uploads/2020/01/img_1111.jpg?fit=1000%2C750&ssl=1" class="h-48 w-full object-cover" alt="Vision">
+                        <div class="p-6 text-center">
+                            <h3 class="text-lg font-bold text-blue-900 mb-4 uppercase">Vision</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed">
+                                SMARTLINE aims to deliver competitive, high-quality electronic manufacturing services while fostering innovation, teamwork, and continuous improvement.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Mission -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition duration-300">
+                        <img src="https://www.projectmanager.com/wp-content/uploads/2018/11/181112_Blog_Feature_Mission.jpg" class="h-48 w-full object-cover" alt="Mission">
+                        <div class="p-6 text-center">
+                            <h3 class="text-lg font-bold text-blue-900 mb-4 uppercase">Mission</h3>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li>• Build long-term customer relationships</li>
+                                <li>• Enhance employee knowledge &amp; leadership</li>
+                                <li>• Implement efficient production systems</li>
+                                <li>• Maintain highest quality standards</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Values -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition duration-300">
+                        <img src="https://strategicmanagementinsight.com/wp-content/uploads/featured-value-statement.png" class="h-48 w-full object-cover" alt="Values">
+                        <div class="p-6 text-center">
+                            <h3 class="text-lg font-bold text-blue-900 mb-4 uppercase">Values</h3>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li>• Strong Customer Relations</li>
+                                <li>• High Quality Products &amp; Services</li>
+                                <li>• Employee Growth &amp; Leadership</li>
+                                <li>• Integrity &amp; Respect</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- FIX 3: Closing </main> tag added -->
+
+    <!-- ===== FOOTER ===== -->
+    <!-- FIX 4: Footer moved outside <main> and all unclosed section/div tags resolved -->
+    <footer class="bg-gray-900 text-white py-12 border-t-8 border-red-700">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <!-- Column 1: Logo & About -->
+                <div>
+                    <img src="smartline.png" alt="Smartline Logo" class="h-12 mb-6">
+                    <p class="text-sm leading-relaxed text-gray-400">
+                        Smartline Systems is a trusted Electronic Manufacturing Services (EMS) provider delivering precision PCB assembly, manufacturing and integrated solutions since 2003.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="social-icon">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 12A10 10 0 1010.06 21.95v-6.2H7.08v-3.55h2.98V9.41c0-2.95 1.76-4.58 4.45-4.58 1.29 0 2.64.23 2.64.23v2.9h-1.49c-1.47 0-1.93.91-1.93 1.84v2.21h3.29l-.53 3.55h-2.76v6.2A10 10 0 0022 12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 0H4C1.79 0 0 1.79 0 4v16c0 2.21 1.79 4 4 4h16c2.21 0 4-1.79 4-4V4c0-2.21-1.79-4-4-4zM7.09 20H3.56V9h3.53v11zM5.33 7.54a2.05 2.05 0 110-4.1 2.05 2.05 0 010 4.1zM20 20h-3.53v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.97V20H8.91V9h3.39v1.5h.05c.47-.9 1.62-1.87 3.34-1.87 3.57 0 4.23 2.35 4.23 5.4V20z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="footer-link">PCB Assembly</a></li>
+                        <li><a href="#" class="footer-link">PCB Manufacturing</a></li>
+                        <li><a href="#" class="footer-link">Component Procurement</a></li>
+                        <li><a href="#" class="footer-link">Box Build Integration</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="footer-title">Contact Info</h4>
+                    <p class="text-sm mb-2">+91 9822790563</p>
+                    <p class="text-sm mb-4">smartlinesystems@hotmail.com</p>
+                    <p class="text-sm text-gray-500">Pune, Maharashtra, India</p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 mt-14 pt-6 text-center text-xs text-gray-500 tracking-widest">
+                &copy; 2026 SMARTLINE SYSTEMS. ALL RIGHTS RESERVED.
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal);
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // FIX 5: Mobile toggle now correctly references unique IDs
+            const mobileToggle = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu-dropdown');
+
+            if (mobileToggle && mobileMenu) {
+                mobileToggle.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Active Navigation Highlight
+            const currentPage = window.location.pathname.split("/").pop() || "index.html";
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute("href");
+                if (linkHref === currentPage) {
+                    link.classList.add("nav-link-active");
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>

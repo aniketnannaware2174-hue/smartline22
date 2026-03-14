@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Smartline Systems is a leading Electronic Manufacturing Services (EMS) company in Pune providing PCB Assembly, SMT, THT, Box Build Integration and ISO certified manufacturing solutions since 2003.">
+  <meta name="keywords" content="EMS company Pune, PCB assembly India, SMT assembly Pune, electronic manufacturing services, ISO 9001 PCB manufacturer, box build integration India">
+  <meta name="author" content="Smartline Systems">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Smartline Systems | Electronic Manufacturing Services">
+  <meta property="og:description" content="Precision PCB Assembly, SMT, THT &amp; Box Build Integration since 2003. ISO Certified EMS provider in India.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yourdomain.com/smartline-preview.jpg">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yourdomain.com/contact.html">
+
+  <title>Contact Us | Smartline Systems</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts (single block) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #f8fafc, #eef2f7);
+      color: #1f2937;
+    }
+
+    /* ── Nav ── */
+    .nav-link-active {
+      color: #b91c1c !important;
+      border-bottom: 2px solid #b91c1c;
+      font-weight: 700;
+    }
+
+    .brand-logo {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      padding-left: 20px;
+    }
+
+    /* ── Mega menu ── */
+    .megamenu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-50%) translateY(-8px);
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    }
+    .group:hover .megamenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    .arrow-icon { transition: transform 0.3s ease; }
+    .group:hover .arrow-icon { transform: rotate(180deg); }
+
+    /* ── Section ── */
+    .section { padding: 40px 4%; }
+
+    .section-title { text-align: center; margin-bottom: 30px; }
+    .section-title h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+    .section-title p { color: #6b7280; max-width: 600px; margin: auto; font-size: 0.95rem; }
+    .line { width: 50px; height: 3px; background: #b91c1c; margin: 12px auto 0; }
+
+    /* ── Form Card ── */
+    .form-card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .form-section { margin-bottom: 25px; }
+    .form-section h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      border-left: 5px solid #b91c1c;
+      padding-left: 10px;
+      margin-bottom: 12px;
+    }
+
+    /* ── Input Grid ── */
+    .input-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="file"],
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      transition: 0.3s ease;
+      background: #fff;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #b91c1c;
+      box-shadow: 0 0 0 3px rgba(185,28,28,0.15);
+    }
+
+    /* ── Checkbox Grid ── */
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .checkbox-grid label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 2px solid #0055ff;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .checkbox-grid label:hover {
+      background: #f0f6ff;
+      border-color: #003ecc;
+    }
+
+    .checkbox-grid input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: #b91c1c;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 992px) { .checkbox-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px)  { .checkbox-grid { grid-template-columns: 1fr; } }
+
+    /* ── Submit ── */
+    .submit-area {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 15px;
+      margin-top: 15px;
+    }
+
+    .submit-area label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+
+    .submit-area input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: #b91c1c;
+    }
+
+    .btn-primary {
+      background: #b91c1c;
+      color: #fff;
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-primary:hover { background: #991b1b; }
+
+    /* ── Footer utility ── */
+    .footer-link { color: #9ca3af; text-decoration: none; transition: color 0.2s; }
+    .footer-link:hover { color: #ef4444; }
+
+    .social-icon {
+      display: flex; align-items: center; justify-content: center;
+      width: 2rem; height: 2rem; border-radius: 50%;
+      background: #374151; color: #9ca3af;
+      transition: background 0.2s, color 0.2s;
+    }
+    .social-icon:hover { background: #b91c1c; color: #fff; }
+
+    @media (max-width: 768px) { .form-card { padding: 15px; } }
+
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+
+    /* ── Success banner ── */
+    #success-message {
+      background: #dcfce7; border: 1px solid #16a34a;
+      color: #15803d; padding: 14px 20px;
+      border-radius: 8px; font-weight: 600;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+   <!-- ===== HEADER ===== -->
+  <header class="bg-white sticky top-0 z-[9999] border-b border-gray-200 backdrop-blur-sm">
+    <div class="container mx-auto px-2 py-1 flex justify-between items-center">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="smartline.png" alt="Smartline Systems Logo" class="brand-logo">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 text-gray-700 font-bold uppercase text-sm">
+
+        <a href="index.html" class="hover:text-red-700 transition-colors nav-link">Home</a>
+        <a href="about.html" class="hover:text-red-700 transition-colors nav-link">About Us</a>
+
+        <!-- Products & Services Dropdown -->
+        <div class="relative group py-4">
+          <a href="services.html"
+             class="nav-link flex items-center hover:text-red-700 transition-colors uppercase font-semibold">
+            Products &amp; Services
+            <svg class="arrow-icon w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </a>
+
+          <!-- Mega Menu -->
+          <div class="megamenu absolute left-1/2 top-full mt-3
+                      w-[780px] max-w-[95vw]
+                      bg-white shadow-2xl rounded-lg   
+                      border-t-4 border-red-700
+                      z-[9999] p-6">
+            <div class="grid grid-cols-3 gap-6 text-left">
+
+              <!-- Column 1 -->
+              <div>
+                <a href="services.html#pcb-assembly" class="block">
+  <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">
+  PCB Assembly (PCBA)
+  </h3>
+               <a href="services.html#pcb-manufacturing" class="block">
+  <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">
+    PCB Manufacturing Support
+  </h3>
+</a>
+
+              <!-- Column 2 -->
+             <a href="services.html#component-sourcing" class="block">
+  <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">
+    Component Sourcing &amp; Procurement Support
+  </h3>
+</a>
+
+                <a href="services.html#pcb-design" class="block">
+  <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">
+   PCB Design &amp; Engineering Support
+  </h3>
+</a>
+<a href="services.html#box-build" class="block">
+  <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">
+    Box Build &amp; System Integration
+  </h3>
+</a>
+              </div>
+
+              <!-- Column 3 -->
+              <div>
+                <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1">Production Facility</h3>
+                <ul class="space-y-1 text-gray-600 text-xs">
+                  <li><a href="productionfacility.html#manual-stencil" class="hover:text-red-700 block">• Manual high precision stencil printer</a></li>
+                  <li><a href="productionfacility.html#smd-pick-place" class="hover:text-red-700 block">• SMD Pick and Place Machine</a></li>
+                  <li><a href="productionfacility.html#smt-reflow" class="hover:text-red-700 block">• SMT Reflow Machine</a></li>
+                  <li><a href="productionfacility.html#wave-soldering" class="hover:text-red-700 block">• Wave Soldering Machine</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Dropdown -->
+        <div class="relative group py-4">
+          <a href="contact.html" class="nav-link flex items-center hover:text-red-700 transition-colors uppercase font-semibold">
+            Contact
+            <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <!-- Contact Dropdown Menu -->
+          <div class="absolute left-0 top-full mt-3 w-56 bg-white shadow-2xl rounded-lg border-t-4 border-red-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999] py-2">
+            <a href="contact.html" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">Contact Us</a>
+            <a href="logo img/supplier.html" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">Supplier Registration</a>
+            <a href="career.html" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">Career / Jobs</a>
+          </div>
+        </div>
+
+      </nav>
+
+      <!-- CTA Button -->
+      <a href="contact.html"
+         class="hidden md:inline-block bg-red-700 text-white font-bold px-6 py-2 rounded shadow-md hover:bg-red-800 transition-all uppercase text-sm">
+        ENQUIRY
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden text-gray-900">
+        <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 bg-white border-t">
+      <a href="index.html"    class="block py-3 font-bold border-b nav-link">Home</a>
+      <a href="about.html"   class="block py-3 font-bold border-b nav-link">About Us</a>
+      <a href="services.html" class="block py-3 font-bold border-b nav-link">Services</a>
+      <a href="contact.html" class="block py-3 font-bold nav-link">Contact</a>
+    </div>
+  </header>
+
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- ── Enquiry Form Section ── -->
+    <section class="section">
+      <div class="section-title">
+        <h1>Enquiry &amp; Support</h1>
+        <p>Submit your project details and our technical team will respond with a tailored quotation.</p>
+        <div class="line"></div>
+      </div>
+
+      <div class="form-card">
+
+        <!-- Success Message (hidden by default) -->
+        <div id="success-message" class="hidden">
+          ✅ Thank you! Your enquiry has been submitted. We'll get back to you shortly.
+        </div>
+
+        <form id="enquiry-form">
+
+          <!-- 1. Company & Contact -->
+          <div class="form-section">
+            <h3>1. Company &amp; Contact Information</h3>
+            <div class="input-group">
+              <input type="text" name="name" placeholder="Full Name *" required>
+              <input type="text" name="company" placeholder="Company Name *" required>
+              <input type="text" name="designation" placeholder="Designation">
+              <input type="email" name="email" placeholder="Email Address *" required>
+              <input type="tel" name="phone" placeholder="Phone / WhatsApp *" required>
+              <input type="text" name="country" placeholder="Country *" required>
+              <input type="url" name="website" placeholder="Company Website (Optional)">
+            </div>
+          </div>
+
+          <!-- 2. Project / Service Details -->
+          <div class="form-section">
+            <h3>2. Project / Service Details</h3>
+            <div class="input-group">
+              <div class="flex flex-wrap gap-6 mb-4">
+                <div class="flex-1 min-w-[220px]">
+                  <label for="service-select" class="block mb-2 font-semibold">Select Service *</label>
+                  <select id="service-select" name="service" required class="w-full p-2 rounded border border-gray-300">
+                    <option value="">-- Choose a Service --</option>
+                    <option value="SMT PCB Assembly">SMT PCB Assembly</option>
+                    <option value="Through-Hole Assembly">Through-Hole Assembly</option>
+                    <option value="Box Build Assembly">Box Build Assembly</option>
+                    <option value="PCB Designing">PCB Designing</option>
+                    <option value="Testing Services">Testing Services</option>
+                    <option value="Prototype Development">Prototype Development</option>
+                  </select>
+                </div>
+                <div class="flex-1 min-w-[220px]">
+                  <label for="project-type" class="block mb-2 font-semibold">Select Project Type *</label>
+                  <select id="project-type" name="project-type" required class="w-full p-2 rounded border border-gray-300">
+                    <option value="">-- Choose Project Type --</option>
+                    <option value="New Development">New Development</option>
+                    <option value="Mass Production">Mass Production</option>
+                    <option value="Prototype">Prototype</option>
+                    <option value="Reverse Engineering">Reverse Engineering</option>
+                    <option value="Consultation">Consultation</option>
+                  </select>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                <input type="text" name="estimated_quantity" placeholder="Estimated Order Quantity *" required>
+                <input type="text" name="annual_volume" placeholder="Annual Volume">
+                <input type="text" name="pcb_layers" placeholder="Number of PCB Layers">
+                <input type="text" name="board_dimensions" placeholder="Board Dimensions (mm)">
+                <input type="text" name="board_thickness" placeholder="Board Thickness">
+                <input type="text" name="surface_finish" placeholder="Surface Finish (HASL / ENIG / OSP)">
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Technical Details & Delivery -->
+          <div class="form-section">
+            <h3>3. Technical Details &amp; Delivery</h3>
+            <div class="input-group">
+              <input type="text" name="turnaround_time" placeholder="Turnaround Time Required">
+              <input type="text" name="target_budget" placeholder="Target Budget (Optional)">
+              <input type="text" name="shipping_destination" placeholder="Shipping Destination Country *" required>
+              <input type="file" name="attachment" title="Upload files">
+            </div>
+          </div>
+
+          <!-- 4. Additional Information -->
+          <div class="form-section">
+            <h3> 4. Additional Information</h3>
+            <textarea name="message" rows="4" placeholder="  Message / Project Description *" required></textarea>
+            <input type="text" name="hear_about_us" placeholder="How did you hear about us?" style="margin-top:1px; border-color: #000000;">
+          </div>
+
+          <!-- Submit -->
+          <div class="submit-area">
+            <label>
+              <input type="checkbox" required>
+              I agree to the Privacy Policy
+            </label>
+            <button type="submit" id="enquiry-submit-btn" class="btn-primary">Request a Quote</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ── Map & Quick Contact Section ── -->
+    <section class="py-12 bg-gray-100">
+      <div class="container mx-auto px-6">
+
+        <div class="text-center mb-8">
+          <h2 class="text-blue-900 font-bold uppercase tracking-widest text-xs mb-1">Contact Us</h2>
+          <h3 class="text-3xl font-black text-gray-900">Get in Touch With Us</h3>
+          <div class="w-12 h-1 bg-red-700 mx-auto mt-2"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+
+          <!-- Map -->
+          <div class="bg-white p-3 rounded-xl shadow-lg">
+            <div class="rounded-xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps?q=SMARTLINE+Systems+Plot+No.+RM-99+B-3+Shahunagar+MIDC+Chinchwad+Pune+411019&output=embed"
+                width="100%"
+                height="480"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                title="Smartline Systems Location">
+              </iframe>
+            </div>
+            <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+              SMARTLINE Systems | Electronic Manufacturing Services<br>
+              Plot No. RM-99 B-3 Shahunagar, MIDC,<br>
+              Chinchwad, Pune – 411019, Maharashtra, India
+            </p>
+          </div>
+
+          <!-- Right: Contact info + quick form -->
+          <div class="space-y-4">
+
+            <!-- Contact Info -->
+            <div class="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+              <h4 class="text-base font-bold text-gray-900 mb-2">Contact Information</h4>
+              <div class="text-xs text-gray-700 space-y-1">
+                <p><span class="font-semibold">Phone:</span> +91 9822790563</p>
+                <p><span class="font-semibold">Email:</span> smartlinesystems@hotmail.com</p>
+              </div>
+            </div>
+
+            <!-- Quick Enquiry Form -->
+            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200" >
+              <h4 class="text-sm font-bold text-gray-900 mb-3">Send Enquiry</h4>
+
+              <div id="quick-success" class="hidden mb-3 bg-green-50 border border-green-400 text-green-700 px-3 py-2 rounded font-semibold text-xs">
+                ✅ Message sent successfully!
+              </div>
+
+              <form id="quick-form" class="space-y-2">
+                <input type="text" name="name" placeholder="Full Name" required
+                  class="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700 font-['Inter']">
+
+                <input type="email" name="email" placeholder="Email Address" required
+                  class="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+
+                <input type="tel" name="phone" placeholder="Phone Number"
+                  class="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+
+                <textarea name="message" rows="3" placeholder="Your Message"
+                  class="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700 resize-none"></textarea>
+
+                <div>
+                  <label class="text-xs text-gray-600">Upload File (Optional)</label>
+                  <input type="file" name="attachment"
+                    class="mt-0.5 w-full text-xs border border-gray-300 rounded-md p-1">
+                </div>
+
+                <button type="submit" id="quick-submit-btn"
+                  class="w-full bg-red-700 text-white py-1.5 text-xs rounded-md font-semibold uppercase tracking-wide hover:bg-red-800 transition">
+                  Submit
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-gray-900 text-white py-8 border-t-8 border-red-700">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Column 1: Logo & About -->
+        <div>
+          <img src="smartline.png" alt="Smartline Logo" class="h-10 mb-3">
+          <p class="text-xs leading-relaxed text-gray-400">
+            Smartline Systems is a trusted Electronic Manufacturing Services (EMS) provider delivering
+            precision PCB assembly, manufacturing and integrated solutions since 2003.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex space-x-3 mt-4">
+
+            <!-- Facebook -->
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22 12A10 10 0 1010.06 21.95v-6.2H7.08v-3.55h2.98V9.41c0-2.95 1.76-4.58 4.45-4.58
+                         1.29 0 2.64.23 2.64.23v2.9h-1.49c-1.47 0-1.93.91-1.93 1.84v2.21h3.29l-.53 3.55
+                         h-2.76v6.2A10 10 0 0022 12z"/>
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 0H4C1.79 0 0 1.79 0 4v16c0 2.21 1.79 4 4 4h16c2.21 0 4-1.79 4-4V4
+                         c0-2.21-1.79-4-4-4zM7.09 20H3.56V9h3.53v11zM5.33 7.54a2.05 2.05 0 110-4.1
+                         2.05 2.05 0 010 4.1zM20 20h-3.53v-5.6c0-1.34-.03-3.06-1.87-3.06
+                         -1.87 0-2.16 1.46-2.16 2.97V20H8.91V9h3.39v1.5h.05
+                         c.47-.9 1.62-1.87 3.34-1.87 3.57 0 4.23 2.35 4.23 5.4V20z"/>
+              </svg>
+            </a>
+
+            <!-- Twitter / X -->
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68
+                         l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="index.html"    class="footer-link">Home</a></li>
+            <li><a href="about.html"   class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="services.html" class="footer-link">PCB Assembly</a></li>
+            <li><a href="services.html" class="footer-link">PCB Manufacturing</a></li>
+            <li><a href="services.html" class="footer-link">Component Procurement</a></li>
+            <li><a href="services.html" class="footer-link">Box Build Integration</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Info -->
+        <div>
+          <h4 class="footer-title">Contact Info</h4>
+          <p class="text-xs text-gray-400 mb-1">+91 9822790563</p>
+          <p class="text-xs text-gray-400 mb-2">smartlinesystems@hotmail.com</p>
+          <p class="text-xs text-gray-500">Pune, Maharashtra, India</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-800 mt-6 pt-4 text-center text-xs text-gray-500 tracking-wide">
+        &copy; <span id="current-year"></span> SMARTLINE SYSTEMS. ALL RIGHTS RESERVED.
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Dynamic year
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      // Mobile menu toggle
+      const mobileBtn  = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon   = document.getElementById('menu-icon');
+
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        menuIcon.innerHTML = isHidden
+          ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>'
+          : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+      });
+
+      // Active nav link
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('nav-link-active');
+        }
+      });
+
+      // Main enquiry form handler
+      const enquiryForm   = document.getElementById('enquiry-form');
+      const successMsg    = document.getElementById('success-message');
+      const enquirySubmitBtn = document.getElementById('enquiry-submit-btn');
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxZGRnKu4k_iaK_0eliZTMfxViuVkJakFRk-1jJDvUXSH2q5NCp5i3dncVhjHoapnezlw/exec';
+
+      enquiryForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        enquirySubmitBtn.disabled = true;
+        enquirySubmitBtn.innerText = 'Submitting...';
+        
+        // Ensure name mappings for google sheet
+        const formData = new FormData(enquiryForm);
+        formData.append('form_source', 'Full Enquiry Form');
+        
+        fetch(scriptURL, { method: 'POST', body: formData })
+          .then(response => {
+            successMsg.innerText = "✅ Thank you! Your enquiry has been submitted. We'll get back to you shortly.";
+            successMsg.style.color = '#15803d';
+            successMsg.style.borderColor = '#16a34a';
+            successMsg.style.background = '#dcfce7';
+            successMsg.classList.remove('hidden');
+            enquiryForm.reset();
+            setTimeout(() => successMsg.classList.add('hidden'), 6000);
+            window.scrollTo({ top: enquiryForm.offsetTop - 100, behavior: 'smooth' });
+          })
+          .catch(error => {
+            successMsg.innerText = "❌ Oops! Something went wrong. Please try again later.";
+            successMsg.style.color = '#b91c1c';
+            successMsg.style.borderColor = '#ef4444';
+            successMsg.style.background = '#fef2f2';
+            successMsg.classList.remove('hidden');
+          })
+          .finally(() => {
+            enquirySubmitBtn.disabled = false;
+            enquirySubmitBtn.innerText = 'Request a Quote';
+          });
+      });
+
+      // Quick form handler
+      const quickForm    = document.getElementById('quick-form');
+      const quickSuccess = document.getElementById('quick-success');
+      const quickSubmitBtn = document.getElementById('quick-submit-btn');
+
+      quickForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        quickSubmitBtn.disabled = true;
+        quickSubmitBtn.innerText = 'Submitting...';
+        
+        const formData = new FormData(quickForm);
+        formData.append('form_source', 'Quick Contact Form');
+        formData.append('company', 'Not Provided');
+        
+        fetch(scriptURL, { method: 'POST', body: formData })
+          .then(response => {
+            quickSuccess.innerText = "✅ Message sent successfully!";
+            quickSuccess.className = "mb-3 bg-green-50 border border-green-400 text-green-700 px-3 py-2 rounded font-semibold text-xs";
+            quickSuccess.classList.remove('hidden');
+            quickForm.reset();
+            setTimeout(() => quickSuccess.classList.add('hidden'), 5000);
+          })
+          .catch(error => {
+            quickSuccess.innerText = "❌ Failed to send message.";
+            quickSuccess.className = "mb-3 bg-red-50 border border-red-400 text-red-700 px-3 py-2 rounded font-semibold text-xs";
+            quickSuccess.classList.remove('hidden');
+          })
+          .finally(() => {
+            quickSubmitBtn.disabled = false;
+            quickSubmitBtn.innerText = 'Submit';
+          });
+      });
+
+    });
+  </script>
+
+</body>
+</html>
