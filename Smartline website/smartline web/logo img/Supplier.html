@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smartline Systems Supplier Registration Form - Apply to become a supplier or vendor">
+  <meta name="keywords" content="supplier registration, vendor application, material supplier">
+  <meta name="author" content="Smartline Systems">
+  <meta name="robots" content="index, follow">
+
+  <title>Supplier Registration Form | Smartline Systems</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+
+    .nav-link-active {
+      color: #b91c1c !important;
+      border-bottom: 2px solid #b91c1c;
+      font-weight: 700;
+    }
+
+    .brand-logo { 
+      height: 75px; 
+      width: auto; 
+      object-fit: contain; 
+      padding-left: 20px; 
+    }
+
+    .megamenu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-50%) translateY(-8px);
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    }
+
+    .group:hover .megamenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .form-section {
+      background: white;
+      border-left: 4px solid #b91c1c;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-section h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #182e4f;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 0.25rem;
+      font-size: 0.85rem;
+    }
+
+    .form-group label .required {
+      color: #b91c1c;
+      margin-left: 0.25rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.375rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #b91c1c;
+      box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .radio-group, .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .radio-item, .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .radio-item input[type="radio"],
+    .checkbox-item input[type="checkbox"] {
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+      accent-color: #b91c1c;
+    }
+
+    .conditional-field {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #f3f4f6;
+      border-radius: 0.375rem;
+    }
+
+    .conditional-field.show {
+      display: block;
+    }
+
+    .file-upload {
+      position: relative;
+      display: inline-block;
+    }
+
+    .file-upload input[type="file"] {
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .file-upload-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      border: 2px dashed #b91c1c;
+      border-radius: 0.5rem;
+      background: #fef2f2;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+
+    .file-upload:hover .file-upload-label {
+      background: #fee2e2;
+    }
+
+    .file-list {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .file-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem;
+      background: #f3f4f6;
+      border-radius: 0.375rem;
+    }
+
+    .submit-btn {
+      background: #b91c1c;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background: #991b1b;
+    }
+
+    .reset-btn {
+      background: #6b7280;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+
+    .reset-btn:hover {
+      background: #4b5563;
+    }
+
+    .form-footer {
+      background: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer-title {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .footer-link {
+      color: #9ca3af;
+      transition: color 0.2s;
+      display: block;
+    }
+
+    .footer-link:hover { color: #fff; }
+
+    .social-icon {
+      color: #9ca3af;
+      transition: color 0.2s;
+    }
+
+    .social-icon:hover { color: #fff; }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- ===== HEADER ===== -->
+  <header class="bg-white sticky top-0 z-[9999] border-b border-gray-200 backdrop-blur-sm">
+    <div class="container mx-auto px-2 py-1 flex justify-between items-center">
+      <a href="../index.html" class="flex items-center space-x-3">
+        <img src="../smartline.png" alt="Smartline Systems Logo" class="brand-logo">
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-gray-700 font-bold uppercase text-sm">
+        <a href="../index.html" class="hover:text-red-700 transition-colors nav-link">Home</a>
+        <a href="../about.html" class="hover:text-red-700 transition-colors nav-link">About Us</a>
+
+        <!-- Products & Services Dropdown -->
+        <div class="relative group py-4">
+          <a href="../services.html" class="nav-link flex items-center hover:text-red-700 transition-colors uppercase font-semibold">
+            Products &amp; Services
+            <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+
+          <!-- Mega Menu -->
+          <div class="megamenu absolute left-1/2 -translate-x-1/2 top-full mt-3
+                      w-[780px] max-w-[95vw]
+                      bg-white shadow-2xl rounded-lg
+                      border-t-4 border-red-700
+                      opacity-0 invisible
+                      group-hover:opacity-100 group-hover:visible
+                      transition-all duration-300 z-[9999] p-6">
+            <div class="grid grid-cols-3 gap-6 text-left">
+              <!-- Column 1 -->
+              <div>
+                <a href="../services.html#pcb-assembly" class="block">
+                  <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">PCB Assembly (PCBA)</h3>
+                </a>
+                <a href="../services.html#pcb-manufacturing" class="block">
+                  <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">PCB Manufacturing Support</h3>
+                </a>
+                <a href="../services.html#component-sourcing" class="block">
+                  <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">Component Sourcing &amp; Procurement Support</h3>
+                </a>
+              </div>
+              <!-- Column 2 -->
+              <div>
+                <a href="../services.html#pcb-design" class="block">
+                  <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">PCB Design &amp; Engineering Support</h3>
+                </a>
+                <a href="../services.html#box-build" class="block">
+                  <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1 hover:text-red-700 transition">Box Build &amp; System Integration</h3>
+                </a>
+              </div>
+              <!-- Column 3 -->
+              <div>
+                <h3 class="text-blue-900 font-semibold text-xs uppercase mb-2 border-b pb-1">Production Facility</h3>
+                <ul class="space-y-1 text-gray-600 text-xs">
+                  <li><a href="../productionfacility.html#manual-stencil" class="hover:text-red-700 block">• Manual high precision stencil printer</a></li>
+                  <li><a href="../productionfacility.html#smd-pick-place" class="hover:text-red-700 block">• SMD Pick and Place Machine</a></li>
+                  <li><a href="../productionfacility.html#smt-reflow" class="hover:text-red-700 block">• SMT Reflow Machine</a></li>
+                  <li><a href="../productionfacility.html#wave-soldering" class="hover:text-red-700 block">• Wave Soldering Machine</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Dropdown -->
+        <div class="relative group py-4">
+          <a href="../contact.html" class="nav-link flex items-center hover:text-red-700 transition-colors uppercase font-semibold">
+            Contact
+            <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <!-- Contact Dropdown Menu -->
+          <div class="absolute left-0 top-full mt-3 w-56 bg-white shadow-2xl rounded-lg border-t-4 border-red-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999] py-2">
+            <a href="../contact.html" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">Contact Us</a>
+            <a href="supplier.html" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">Supplier Registration</a>
+            <a href="../career.html" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">Career / Jobs</a>
+          </div>
+        </div>
+      </nav>
+
+      <a href="../contact.html" class="hidden md:inline-block bg-red-700 text-white font-bold px-6 py-2 rounded shadow-md hover:bg-red-800 transition-all uppercase text-sm">
+        ENQUIRY
+      </a>
+
+      <button id="mobile-menu-button" class="md:hidden text-gray-900">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu-dropdown" class="hidden md:hidden px-6 pb-6 bg-white border-t">
+      <a href="../index.html" class="block py-3 font-bold border-b nav-link">Home</a>
+      <a href="../about.html" class="block py-3 font-bold border-b nav-link">About Us</a>
+      <a href="../services.html" class="block py-3 font-bold border-b nav-link">Services</a>
+      <a href="../contact.html" class="block py-3 font-bold nav-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-900 py-8 text-white text-center">
+      <div class="container mx-auto px-6">
+        <h1 class="text-3xl md:text-4xl font-black mb-2 uppercase tracking-tighter">Supplier Registration</h1>
+        <p class="text-base md:text-lg text-blue-100 max-w-2xl mx-auto italic font-medium">
+          Become a trusted partner with Smartline Systems
+        </p>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="py-8 bg-gray-50">
+      <div class="container mx-auto px-4 max-w-4xl">
+
+        <form id="supplierForm" method="POST" enctype="multipart/form-data" class="space-y-6">
+
+          <!-- 1️⃣ COMPANY INFORMATION -->
+          <div class="form-section">
+            <h3>1️⃣ Company Information</h3>
+            
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Company Name <span class="required">*</span></label>
+                <input type="text" name="company_name" required placeholder="Enter company name">
+              </div>
+
+              <div class="form-group">
+                <label>Type of Business <span class="required">*</span></label>
+                <select name="business_type" required>
+                  <option value="">-- Select --</option>
+                  <option value="manufacturer">Manufacturer</option>
+                  <option value="trader">Trader / Distributor</option>
+                  <option value="importer">Importer</option>
+                  <option value="service_provider">Service Provider</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Year of Establishment</label>
+                <input type="number" name="year_established" placeholder="e.g., 2003" min="1900" max="2026">
+              </div>
+
+              <div class="form-group">
+                <label>Nature of Organization <span class="required">*</span></label>
+                <select name="organization_type" required>
+                  <option value="">-- Select --</option>
+                  <option value="proprietorship">Proprietorship</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="pvt_ltd">Pvt. Ltd.</option>
+                  <option value="ltd">Ltd.</option>
+                  <option value="llp">LLP</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>GST Number <span class="required">*</span></label>
+                <input type="text" name="gst_number" required placeholder="e.g., 27XXXXXXXXXXXXXX">
+              </div>
+
+              <div class="form-group">
+                <label>PAN Number <span class="required">*</span></label>
+                <input type="text" name="pan_number" required placeholder="e.g., XXXXXX1234P">
+              </div>
+
+              <div class="form-group">
+                <label>MSME Registration Number (if applicable)</label>
+                <input type="text" name="msme_number" placeholder="Leave blank if not applicable">
+              </div>
+
+              <div class="form-group">
+                <label>CIN Number (if applicable)</label>
+                <input type="text" name="cin_number" placeholder="Leave blank if not applicable">
+              </div>
+            </div>
+          </div>
+
+          <!-- 2️⃣ REGISTERED OFFICE ADDRESS -->
+          <div class="form-section">
+            <h3>2️⃣ Registered Office Address</h3>
+            
+            <div class="form-grid">
+              <div class="form-group col-span-full md:col-span-2">
+                <label>Address Line 1 <span class="required">*</span></label>
+                <input type="text" name="address_line1" required placeholder="Street address">
+              </div>
+
+              <div class="form-group col-span-full md:col-span-2">
+                <label>Address Line 2</label>
+                <input type="text" name="address_line2" placeholder="Apartment, suite, etc. (optional)">
+              </div>
+
+              <div class="form-group">
+                <label>City <span class="required">*</span></label>
+                <input type="text" name="city" required placeholder="City">
+              </div>
+
+              <div class="form-group">
+                <label>State <span class="required">*</span></label>
+                <input type="text" name="state" required placeholder="State">
+              </div>
+
+              <div class="form-group">
+                <label>Pin Code <span class="required">*</span></label>
+                <input type="text" name="pin_code" required placeholder="Pin code">
+              </div>
+
+              <div class="form-group">
+                <label>Country <span class="required">*</span></label>
+                <select name="country" required>
+                  <option value="">-- Select Country --</option>
+                  <option value="india">India</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3️⃣ CONTACT DETAILS -->
+          <div class="form-section">
+            <h3>3️⃣ Contact Details</h3>
+            
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Contact Person Name <span class="required">*</span></label>
+                <input type="text" name="contact_person" required placeholder="Full name">
+              </div>
+
+              <div class="form-group">
+                <label>Designation <span class="required">*</span></label>
+                <input type="text" name="designation" required placeholder="e.g., Director, Manager">
+              </div>
+
+              <div class="form-group">
+                <label>Mobile Number <span class="required">*</span></label>
+                <input type="tel" name="mobile_number" required placeholder="+91 XXXXXXXXXX">
+              </div>
+
+              <div class="form-group">
+                <label>Alternate Number</label>
+                <input type="tel" name="alternate_number" placeholder="+91 XXXXXXXXXX">
+              </div>
+
+              <div class="form-group">
+                <label>Email Address <span class="required">*</span></label>
+                <input type="email" name="email" required placeholder="email@example.com">
+              </div>
+
+              <div class="form-group">
+                <label>Website</label>
+                <input type="url" name="website" placeholder="https://example.com">
+              </div>
+            </div>
+          </div>
+
+          <!-- 4️⃣ PRODUCT / SERVICE DETAILS -->
+          <div class="form-section">
+            <h3>4️⃣ Product / Service Details</h3>
+            
+            <div class="form-grid">
+              <div class="form-group col-span-full">
+                <label>Type of Material / Service Supplied <span class="required">*</span></label>
+                <input type="text" name="material_type" required placeholder="e.g., Electronic Components, PCB, etc.">
+              </div>
+
+              <div class="form-group col-span-full">
+                <label>Product Category <span class="required">*</span></label>
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input type="radio" id="category_components" name="product_category" value="electronic_components" required>
+                    <label for="category_components">Electronic Components</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="category_pcb" name="product_category" value="pcb">
+                    <label for="category_pcb">PCB</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="category_mechanical" name="product_category" value="mechanical_parts">
+                    <label for="category_mechanical">Mechanical Parts</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="category_packaging" name="product_category" value="packaging_material">
+                    <label for="category_packaging">Packaging Material</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="category_raw" name="product_category" value="raw_materials">
+                    <label for="category_raw">Raw Materials</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="category_chemicals" name="product_category" value="chemicals">
+                    <label for="category_chemicals">Chemicals</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="category_other" name="product_category" value="other">
+                    <label for="category_other">Other</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col-span-full">
+                <label>Brand Names (if applicable)</label>
+                <textarea name="brand_names" placeholder="List brand names you supply..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label>Monthly Supply Capacity</label>
+                <input type="text" name="supply_capacity" placeholder="e.g., 1000 units/month">
+              </div>
+
+              <div class="form-group col-span-full">
+                <label>Major Clients (Optional)</label>
+                <textarea name="major_clients" placeholder="List major clients you supply to..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5️⃣ QUALITY & COMPLIANCE -->
+          <div class="form-section">
+            <h3>5️⃣ Quality &amp; Compliance</h3>
+            
+            <div class="form-grid">
+              <div class="form-group col-span-full">
+                <label>ISO Certified?</label>
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input type="radio" id="iso_yes" name="iso_certified" value="yes" onchange="toggleISOField()">
+                    <label for="iso_yes">Yes</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="iso_no" name="iso_certified" value="no" onchange="toggleISOField()" checked>
+                    <label for="iso_no">No</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col-span-full conditional-field" id="isoField">
+                <label>Specify ISO Standard</label>
+                <input type="text" name="iso_standard" placeholder="e.g., ISO 9001:2015, ISO 13485:2016">
+              </div>
+
+              <div class="form-group col-span-full">
+                <label>RoHS Compliant?</label>
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input type="radio" id="rohs_yes" name="rohs_compliant" value="yes">
+                    <label for="rohs_yes">Yes</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="rohs_no" name="rohs_compliant" value="no" checked>
+                    <label for="rohs_no">No</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col-span-full">
+                <label>Other Certifications (Upload)</label>
+                <div class="file-upload">
+                  <input type="file" name="other_certifications" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                  <label class="file-upload-label">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    <span>Click to upload or drag and drop</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group col-span-full">
+                <label>Do you provide Test Reports / COA?</label>
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input type="radio" id="coa_yes" name="test_reports" value="yes">
+                    <label for="coa_yes">Yes</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="coa_no" name="test_reports" value="no" checked>
+                    <label for="coa_no">No</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6️⃣ BANKING DETAILS -->
+          <div class="form-section">
+            <h3>6️⃣ Banking Details</h3>
+            
+            <div class="form-grid">
+              <div class="form-group col-span-full">
+                <label>Bank Name</label>
+                <input type="text" name="bank_name" placeholder="Bank name">
+              </div>
+
+              <div class="form-group">
+                <label>Account Number</label>
+                <input type="text" name="account_number" placeholder="Account number">
+              </div>
+
+              <div class="form-group">
+                <label>IFSC Code</label>
+                <input type="text" name="ifsc_code" placeholder="IFSC code">
+              </div>
+
+              <div class="form-group">
+                <label>Branch Name</label>
+                <input type="text" name="branch_name" placeholder="Branch name">
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <p class="text-gray-600 mb-3 font-medium">Or Upload Cancelled Cheque</p>
+              <div class="file-upload">
+                <input type="file" name="cancelled_cheque" accept=".pdf,.jpg,.jpeg,.png">
+                <label class="file-upload-label">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                  <span>Upload cancelled cheque</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7️⃣ DOCUMENT UPLOAD -->
+          <div class="form-section">
+            <h3>7️⃣ Document Upload</h3>
+            <p class="text-gray-600 mb-6">Upload the required documents for verification</p>
+            
+            <div class="space-y-4">
+              <div>
+                <label class="block font-semibold text-gray-800 mb-1 text-sm">Upload Resume / CV <span class="required">*</span></label>
+                <div class="file-upload">
+                  <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+                  <label class="file-upload-label">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    <span>Upload document</span>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-semibold text-gray-800 mb-1 text-sm">GST Certificate <span class="required">*</span></label>
+                <div class="file-upload">
+                  <input type="file" name="gst_cert" required>
+                  <label class="file-upload-label">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    <span>Upload document</span>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-semibold text-gray-800 mb-1 text-sm">PAN Card <span class="required">*</span></label>
+                <div class="file-upload">
+                  <input type="file" name="pan_card" required>
+                  <label class="file-upload-label">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    <span>Upload document</span>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-semibold text-gray-800 mb-2">ISO / Other Certifications</label>
+                <div class="file-upload">
+                  <input type="file" name="iso_certifications" accept=".pdf,.jpg,.jpeg,.png">
+                  <label class="file-upload-label">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    <span>Upload document</span>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-semibold text-gray-800 mb-1 text-sm">Product Catalog</label>
+                <div class="file-upload">
+                  <input type="file" name="product_catalog">
+                  <label class="file-upload-label">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    <span>Upload document</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8️⃣ DECLARATION -->
+          <div class="form-section">
+            <h3>8️⃣ Declaration</h3>
+            
+            <div class="space-y-6">
+              <div class="checkbox-item bg-blue-50 p-4 rounded">
+                <input type="checkbox" id="declaration" name="declaration" required>
+                <label for="declaration" class="font-medium text-gray-800 cursor-pointer">
+                  We hereby declare that the information provided is true and correct. We agree to comply with Smartline Systems' quality and procurement policies.
+                </label>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Authorized Signatory Name <span class="required">*</span></label>
+                  <input type="text" name="signatory_name" required placeholder="Name of authorized signatory">
+                </div>
+
+                <div class="form-group">
+                  <label>Signature (Digital) <span class="required">*</span></label>
+                  <div class="file-upload">
+                    <input type="file" name="digital_signature" accept=".pdf,.jpg,.jpeg,.png" required>
+                    <label class="file-upload-label">
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                      </svg>
+                      <span>Upload signature</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Date <span class="required">*</span></label>
+                  <input type="date" name="declaration_date" required>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBMIT BUTTONS -->
+          <div class="form-footer">
+            <div class="grid md:grid-cols-2 gap-4">
+              <button type="submit" class="submit-btn">Submit Application</button>
+              <button type="reset" class="reset-btn">Clear Form</button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-gray-900 text-white py-12 border-t-8 border-red-700">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+        <!-- Column 1: Logo & About -->
+        <div>
+          <img src="smartline.png" alt="Smartline Logo" class="h-12 mb-6">
+          <p class="text-sm leading-relaxed text-gray-400">
+            Smartline Systems is a trusted Electronic Manufacturing Services (EMS) provider delivering precision PCB assembly, manufacturing and integrated solutions since 2003.
+          </p>
+          <div class="flex space-x-4 mt-6">
+            <a href="#" class="social-icon">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22 12A10 10 0 1010.06 21.95v-6.2H7.08v-3.55h2.98V9.41c0-2.95 1.76-4.58 4.45-4.58 1.29 0 2.64.23 2.64.23v2.9h-1.49c-1.47 0-1.93.91-1.93 1.84v2.21h3.29l-.53 3.55h-2.76v6.2A10 10 0 0022 12z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 0H4C1.79 0 0 1.79 0 4v16c0 2.21 1.79 4 4 4h16c2.21 0 4-1.79 4-4V4c0-2.21-1.79-4-4-4zM7.09 20H3.56V9h3.53v11zM5.33 7.54a2.05 2.05 0 110-4.1 2.05 2.05 0 010 4.1zM20 20h-3.53v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.97V20H8.91V9h3.39v1.5h.05c.47-.9 1.62-1.87 3.34-1.87 3.57 0 4.23 2.35 4.23 5.4V20z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="../index.html" class="footer-link">Home</a></li>
+            <li><a href="../about.html" class="footer-link">About Us</a></li>
+            <li><a href="../services.html" class="footer-link">Services</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="../services.html" class="footer-link">PCB Assembly</a></li>
+            <li><a href="../services.html" class="footer-link">PCB Manufacturing</a></li>
+            <li><a href="../services.html" class="footer-link">Component Procurement</a></li>
+            <li><a href="../services.html" class="footer-link">Box Build Integration</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Info -->
+        <div>
+          <h4 class="footer-title">Contact Info</h4>
+          <p class="text-sm text-gray-400 mb-2">+91 9822790563</p>
+          <p class="text-sm text-gray-400 mb-4">smartlinesystems@hotmail.com</p>
+          <p class="text-sm text-gray-500">Pune, Maharashtra, India</p>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-800 mt-14 pt-6 text-center text-xs text-gray-500 tracking-widest">
+        &copy; 2026 SMARTLINE SYSTEMS. ALL RIGHTS RESERVED.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Toggle ISO field based on selection
+    function toggleISOField() {
+      const isoYes = document.getElementById('iso_yes').checked;
+      const isoField = document.getElementById('isoField');
+      
+      if (isoYes) {
+        isoField.classList.add('show');
+      } else {
+        isoField.classList.remove('show');
+      }
+    }
+
+    // Mobile Menu Toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileToggle = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu-dropdown');
+
+      if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', function () {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // Active Navigation Highlight
+      const currentPage = window.location.pathname.split("/").pop() || "index.html";
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach(link => {
+        const linkHref = link.getAttribute("href");
+        if (linkHref === currentPage) {
+          link.classList.add("nav-link-active");
+        }
+      });
+
+      // Form Submission Handler
+      const supplierForm = document.getElementById('supplierForm');
+      if (supplierForm) {
+        supplierForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          alert('Thank you for submitting your application! We will review it and contact you soon.');
+          // You can replace this with actual form submission logic
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
